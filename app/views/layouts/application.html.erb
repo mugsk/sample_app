@@ -1,14 +1,16 @@
+<% provide(:title,'Home') %>
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SampleApp</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<title>Ruby on Rails Tutorial Sample App | <%= yield(:title) %>
+	</title>
+<%= stylesheet_link_tag "application", :media = > "all" %> 
+<%= javascript_include_tag "application" %> 
+<%= csrf_meta_tags %>
 
-<%= yield %>
+
+<body>
+	<% yield %>
 
 </body>
 </html>
